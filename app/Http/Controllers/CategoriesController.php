@@ -90,7 +90,7 @@ class CategoriesController extends Controller
 
         $category->save();
 
-        /* Enviando un correo electrónico a `egiraldoduran@gmail.com` utilizando la clase `CategoryUpdateReport`. */
+
         Mail::to('egiraldoduran@gmail.com')->send(new CategoryUpdateReport($category));
 
         return redirect('/categories');
